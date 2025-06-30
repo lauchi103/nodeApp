@@ -1,0 +1,110 @@
+/* public/css/app.css */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --pubg-dark-bg: #1a1a1a;
+    --pubg-medium-bg: #2b2b2b;
+    --pubg-text-color: #e0e0e0;
+    --pubg-accent-green: #5cb85c;
+    --pubg-accent-orange: #f0ad4e;
+    --pubg-border-color: #444444;
+    --accent: hsl(31, 69%, 74%);
+    --ff: "Noto Sans JP", serif;
+    --ff2: "Fira Sans", serif;
+    --p: 1rem/1.5em var(--ff);
+    --h1: 600 3rem/1.2em var(--ff2);
+    --h2: 600 2rem/1.2em var(--ff2);
+    --spacing0: 0px;
+    --spacing1: 4px;
+    --spacing2: 8px;
+    --spacing3: 16px;
+    --spacing4: 20px;
+    --spacing5: 40px;
+    --spacing6: 80px;
+    --spacing7: 160px;
+}
+
+.map-page-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #34495e;
+    min-height: calc(100vh - 4rem);
+    align-items: flex-start;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
+
+.map-page-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    color: #ecf0f1;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+p {
+    width: 100%;
+}
+
+/* Styles für Navbar, MapDisplay, SidebarControls müssten hier auch rein oder in separate CSS-Dateien */
+
+/* public/css/app.css */
+
+/* ... (Bestehende Regeln) ... */
+
+/* Stil für den Dunkelmodus-Toggle-Container */
+.dark-mode-toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing3);
+}
+
+/* Stil für den Toggle-Button selbst */
+.dark-mode-toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pubg-text-color); /* Kann hier bleiben, hat aber keinen Einfluss auf IMG SVG */
+    transition: color 0.3s ease;
+}
+
+.dark-mode-toggle-button:hover {
+    color: var(--pubg-accent-orange);
+}
+
+/* Icons jetzt als IMG-Tags stylen */
+.dark-mode-toggle-button img {
+    width: 1.5rem;  /* Breite des Bildes */
+    height: 1.5rem; /* Höhe des Bildes */
+    /* Da es SVGs sind, die als IMG geladen werden,
+       kann 'fill' oder 'color' nicht direkt angewendet werden.
+       'filter' ist eine Option, um die Darstellung anzupassen. */
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+/* Optional: CSS-Variable für Icon-Helligkeit im Dark/Light Mode */
+:root {
+    --brightness-icon: 1; /* Standard: volle Helligkeit für Light Mode */
+}
+
+body.dark-mode {
+    --brightness-icon: 0.7; /* Im Dark Mode etwas dunkler machen */
+}
