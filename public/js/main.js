@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
             spawnTypes: {
                 eastroute: "Eastroute",
                 northroute: "Northroute",
-                westroute: "Westroute"
+                westroute: "Westroute",
+                southroute: "Southroute"
             }
         },
         vikendi: {
@@ -121,7 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
         westroute: true,
         northroute: true,
         eastroute: true,
-        bears: true
+        bears: true,
+        southroute: true,
     };
     let darkMode = true;
 

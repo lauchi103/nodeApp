@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: "futura", Arial, sans-serif; /* NEU: Schriftart für die gesamte App */
+}
+
 /* Variables */
 :root {
     --pubg-dark-bg: #1a1a1a;
