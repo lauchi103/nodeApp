@@ -1,4 +1,8 @@
 /* public/css/app.css */
+
+/* Importiere die Navbar-Stile */
+@import url('navbar.css'); /* NEU: Importiert die Navbar-Stile */
+
 /* Reset */
 * {
     margin: 0;
@@ -30,6 +34,14 @@
     --spacing7: 160px;
 }
 
+main {
+    flex-grow: 0; /* Lässt main nicht flexibel wachsen */
+    flex-shrink: 0; /* Verhindert, dass main schrumpft */
+    width: auto; /* Breite wird durch den Inhalt bestimmt */
+    padding: 0; /* Padding wird in map-page-wrapper gehandhabt */
+    box-sizing: border-box;
+}
+
 .map-page-wrapper {
     display: flex;
     justify-content: center;
@@ -46,13 +58,22 @@
 .map-page-container {
     display: flex;
     gap: 2rem;
-    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     color: #ecf0f1;
     text-align: center;
     width: 100%;
     height: 100%;
+    justify-content: center;
+}
+#map-display-placeholder {
+    width: 1008px; /* Feste Breite für die Karte */
+    height: 1008px; /* Feste Höhe für die Karte */
+    flex-shrink: 0; /* Verhindert, dass die Karte schrumpft */
+    /* max-width und max-height entfernt, um feste Größe zu erzwingen */
+    aspect-ratio: 1 / 1; /* Stellt sicher, dass die Karte immer quadratisch bleibt */
+    overflow: hidden; /* Verhindert Überlauf, falls das Bild nicht perfekt passt */
+    position: relative; /* Wichtig für Overlays */
 }
 p {
     width: 100%;
@@ -107,4 +128,62 @@ p {
 
 body.dark-mode {
     --brightness-icon: 0.7; /* Im Dark Mode etwas dunkler machen */
+    min-width: calc(1008px + 250px + 2 * var(--spacing3) + 2 * var(--spacing3) + 2 * 160px); /* Mindestbreite, um Karte + Sidebar + Ads + Gaps zu halten */
+}
+
+@media (max-width: 1300px) {
+    .map-page-container {
+        flex-direction: column; /* Sidebar und Karte stapeln sich */
+        align-items: center; /* Zentriert die gestapelten Elemente */
+        gap: 1rem; /* Reduzierter Abstand im gestapelten Modus */
+    }
+
+    #sidebar-controls-placeholder {
+        width: 90%; /* Sidebar nimmt fast die volle Breite ein */
+        max-width: 500px; /* Aber nicht zu breit auf Tablets */
+        margin-bottom: var(--spacing3); /* Abstand zwischen Sidebar und Karte */
+    }
+
+    #map-display-placeholder {
+        width: 90%; /* Karte nimmt fast die volle Breite ein */
+        height: auto; /* Höhe passt sich an, um das Seitenverhältnis zu erhalten */
+        max-width: 100%; /* Erlaubt der Karte, kleiner zu werden */
+        max-height: none; /* Keine feste max-height mehr */
+    }
+}
+
+/* Media Query für sehr kleine Bildschirme (Mobilgeräte) */
+@media (max-width: 768px) {
+    .page-layout-with-ads {
+        padding: var(--spacing2); /* Weniger Padding für kleine Bildschirme */
+    }
+
+    .ad-sidebar {
+        display: none; /* Blendet Anzeigen auf sehr kleinen Bildschirmen aus */
+    }
+
+    main {
+        padding: 0; /* Kein zusätzliches Padding im Main-Container */
+    }
+
+    .map-page-wrapper {
+        padding: 0.5rem; /* Weniger Padding um die Karte */
+        min-height: calc(100vh - 3rem); /* Angepasste Min-Höhe */
+        justify-content: center;
+    }
+
+    .map-page-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sidebar-controls-placeholder {
+        display: flex;
+        width: 100%; /* Sidebar nimmt volle Breite ein */
+        justify-content: center;
+    }
+
+    #map-display-placeholder {
+        width: 100%; /* Karte nimmt volle Breite ein */
+    }
 }

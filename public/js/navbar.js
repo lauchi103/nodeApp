@@ -3,16 +3,16 @@ function loadNavbar() {
     const navbarPlaceholder = document.getElementById('navbar-placeholder');
     if (navbarPlaceholder) {
         navbarPlaceholder.innerHTML = `
-            <nav style="background-color: var(--pubg-dark-bg); padding: var(--spacing3); display: flex; justify-content: space-around; border-bottom: 1px solid var(--pubg-border-color);">
-                <a href="/maps/erangel" style="color: var(--pubg-text-color); text-decoration: none; padding: var(--spacing2); border-radius: 5px; transition: background-color 0.3s ease;">Erangel</a>
-                <a href="/maps/miramar" style="color: var(--pubg-text-color); text-decoration: none; padding: var(--spacing2); border-radius: 5px; transition: background-color 0.3s ease;">Miramar</a>
-                <a href="/maps/sanhok" style="color: var(--pubg-text-color); text-decoration: none; padding: var(--spacing2); border-radius: 5px; transition: background-color 0.3s ease;">Sanhok</a>
-                <a href="/maps/vikendi" style="color: var(--pubg-text-color); text-decoration: none; padding: var(--spacing2); border-radius: 5px; transition: background-color 0.3s ease;">Vikendi</a>
-                <a href="/maps/karakin" style="color: var(--pubg-text-color); text-decoration: none; padding: var(--spacing2); border-radius: 5px; transition: background-color 0.3s ease;">Karakin</a>
-                <a href="/maps/paramo" style="color: var(--pubg-text-color); text-decoration: none; padding: var(--spacing2); border-radius: 5px; transition: background-color 0.3s ease;">Paramo</a>
-                <a href="/maps/taego" style="color: var(--pubg-text-color); text-decoration: none; padding: var(--spacing2); border-radius: 5px; transition: background-color 0.3s ease;">Taego</a>
-                <a href="/maps/deston" style="color: var(--pubg-text-color); text-decoration: none; padding: var(--spacing2); border-radius: 5px; transition: background-color 0.3s ease;">Deston</a>
-                <a href="/maps/rondo" style="color: var(--pubg-text-color); text-decoration: none; padding: var(--spacing2); border-radius: 5px; transition: background-color 0.3s ease;">Rondo</a>
+            <nav> <!-- Inline-Styles entfernt -->
+                <a href="/maps/erangel">Erangel</a>
+                <a href="/maps/miramar">Miramar</a>
+                <a href="/maps/sanhok">Sanhok</a>
+                <a href="/maps/vikendi">Vikendi</a>
+                <a href="/maps/karakin">Karakin</a>
+                <a href="/maps/paramo">Paramo</a>
+                <a href="/maps/taego">Taego</a>
+                <a href="/maps/deston">Deston</a>
+                <a href="/maps/rondo">Rondo</a>
             </nav>
         `;
 

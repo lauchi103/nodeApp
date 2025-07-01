@@ -1,0 +1,28 @@
+/* public/css/navbar.css */
+
+/* Navbar Container */
+nav {
+    background-color: var(--pubg-dark-bg);
+    padding: var(--spacing3);
+    display: flex;
+    flex-wrap: wrap; /* Wichtig für das Umbrechen der Links */
+    justify-content: space-around; /* Zentriert die Links */
+    gap: var(--spacing2); /* Abstand zwischen den Links */
+    border-bottom: 1px solid var(--pubg-border-color);
+    width: 100%;
+}
+
+/* Navbar Links */
+nav a {
+    color: var(--pubg-text-color);
+    text-decoration: none;
+    padding: var(--spacing2);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Verhindert, dass einzelne Links umbrechen */
+}
+
+/* Navbar Link Hover-Effekt */
+nav a:hover {
+    background-color: var(--pubg-medium-bg);
+}
