@@ -7,7 +7,7 @@ const port = 3000;
 
 const ASSETS_BASE_PATH = path.join(__dirname, 'assets');
 const ASSETS_MAPS_PATH = path.join(ASSETS_BASE_PATH, 'maps');
-const ASSETS_ICONS_PATH = path.join(ASSETS_BASE_PATH, 'icons'); // Pfad zu Icons
+const ASSETS_ICONS_PATH = path.join(ASSETS_BASE_PATH, 'icon'); // Pfad zu Icons
 
 app.use(express.static(path.join(__dirname, 'public')));
 
