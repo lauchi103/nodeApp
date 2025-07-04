@@ -6,7 +6,7 @@ function loadSidebarControls(currentMapSpawnTypes, initialSpawnToggleState, init
         let htmlContent = `
             <aside style="background-color: var(--pubg-medium-bg); padding: var(--spacing3); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); width: 250px; flex-shrink: 0;">
                 <div class="dark-mode-toggle-container">
-                    <h3 style="color: var(--pubg-text-color);">Karten-Optionen</h3>
+                    <h3 style="color: var(--pubg-text-color);">Map Options</h3>
                     <button id="darkModeToggleButton" class="dark-mode-toggle-button">
                         </button>
                 </div>
