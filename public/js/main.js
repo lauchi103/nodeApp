@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gasStations: 'Gasstations',
                 bunkers: "Bunkers",
                 hangGliders: 'Hangglider',
-                labcamps: "Labcamps"
+                labcamps: "Lab Camps"
             }
         },
         karakin: {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         weaponCaches: true, // NEU
         soldiers: true,
         bunkers: true,
-        labcams: true,
+        labcamps: true,
         westroute: true,
         northroute: true,
         eastroute: true,
