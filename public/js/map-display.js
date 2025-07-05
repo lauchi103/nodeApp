@@ -18,6 +18,7 @@ function loadMapDisplay(mapImageSrc, mapAltText, spawnToggleState, darkMode, cur
                 overlaysHtml += `
                     <img id="${overlayId}"
                         src="${imageSrc}"
+                        loading="lazy"
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 1; transition: opacity 0.3s ease-in-out;" />
                 `;
             }
@@ -28,6 +29,7 @@ function loadMapDisplay(mapImageSrc, mapAltText, spawnToggleState, darkMode, cur
                 <img id="currentMapImage"
                     src="/image/${mapSlug}/map.jpg"
                     alt="${mapAltText}"
+                    loading="lazy"
                     style="width: 100%; height: auto; display: block; ${darkMode ? 'filter: brightness(0.7) contrast(1.2);' : ''}" />
 
                 <div id="overlays-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
