@@ -56,6 +56,7 @@ function loadMapDisplay(mapImageSrc, mapAltText, spawnToggleState, darkMode, cur
                 `;
             });
             questionsHtml += '</section>';
+            questionsHtml += '<br><br>Found an issue or have suggestions? <a href="mailto:support@pubg-maps.com">Contact us via email</a> - your feedback helps us improve the map.'; 
             const questionsContainer = document.getElementById('questions');
             if (questionsContainer) {
                 questionsContainer.innerHTML = questionsHtml;

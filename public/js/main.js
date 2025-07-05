@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
         erangel: {
             name: 'Erangel',
             mapImage: '/maps/erangel/',
+            // NEU: Verfügbare Spawn-Typen für Erangel
+            spawnTypes: {
+                hangGliders: 'Hangglider',
+                gasStations: 'Gasstations',
+                secretBasements: 'Secret Basements'
+            },
             top: `Explore the most up-to-date Erangel map in PUBG with all glider spawn points, gas stations, and secret basement locations marked clearly. Updated for 2025, this interactive map helps you plan your route, secure fast rotations, and loot hidden high-tier gear.<br><br>
             Whether you're playing squads or solos, knowing where to find hang gliders and fuel stations can make the difference between early elimination and a chicken dinner.<br><br>
             Toggle map layers and dominate Erangel with confidence.`,
@@ -13,12 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
             - 🔐 <strong>Secret basements</strong> - Contain randomized high-tier loot, accessible with keys.<br>
             All spawn points on this map are based on in-game data and regularly updated.
             Whether you're playing casually or pushing for ranked wins, knowing where to refuel or find hidden loot can give you the tactical edge you need.`,
-            // NEU: Verfügbare Spawn-Typen für Erangel
-            spawnTypes: {
-                hangGliders: 'Hangglider',
-                gasStations: 'Gasstations',
-                secretBasements: 'Secret Basements'
-            },
             questions:[
                 {
                     question: `Where can I find Motor Gliders on Erangel?`,
@@ -31,7 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     question: `How do I find Secret Rooms on Erangel?`,
                     answer:`Secret Rooms are hidden underground bunkers that require a special key to open. Their locations are marked on this map with a blue icon.`,
-                }
+                },
+                {
+                    question: `I found a Secret Room Key on Erangel - what now?`,
+                    answer:`Head to one of the marked Secret Room locations. Once you're there, shoot the wooden planks at the entrance to gain access and loot high-tier gear.`,
+                },
+                {
+                    question: `Can I refuel a Glider at a gas station on Erangel?`,
+                    answer:`Yes - but the refuel icon can be tricky. If it doesn't appear immediately, adjust your camera angle slightly without moving the Glider. The icon will eventually show up.`,
+                },
+                {
+                    question: `What is the best way to leave Sosnovka Island on Erangel?`,
+                    answer:`Avoid the bridges if possible. The safest strategy is to take a Glider and fly across the sea to the mainland. It's faster, safer, and avoids common ambush spots.`,
+                },
             ],
         },
         miramar: {
