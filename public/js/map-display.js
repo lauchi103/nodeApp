@@ -2,7 +2,7 @@
 
 // Parameter angepasst: spawnToggleState (der globale Zustand aller Toggle)
 //                      currentMapSpawnTypes (die relevanten Typen für diese Karte)
-function loadMapDisplay(mapImageSrc, mapAltText, spawnToggleState, darkMode, currentMapSpawnTypes) {
+function loadMapDisplay(mapImageSrc, mapAltText, spawnToggleState, darkMode, currentMapSpawnTypes, questions, top, bottom) {
     const mapSlug = mapImageSrc.split('/').filter(Boolean).pop();
 
     const mapDisplayPlaceholder = document.getElementById('map-display-placeholder');
@@ -36,6 +36,32 @@ function loadMapDisplay(mapImageSrc, mapAltText, spawnToggleState, darkMode, cur
                     ${overlaysHtml} </div>
             </div>
         `;
+
+        //Beschreibungen einfügen
+        const mapInfoTop = document.getElementById('map-info-top');
+        mapInfoTop.innerHTML = top;
+
+        const mapInfoBottom = document.getElementById('map-info-bottom');
+        mapInfoBottom.innerHTML = bottom;
+
+        // Fragen und Antworten einfügen
+        if (questions && Array.isArray(questions)) {
+            let questionsHtml = '<section class="faq-section"><h3>Frequently Asked Questions</h3>';
+            questions.forEach(q => {
+                questionsHtml += `
+                    <div class="faq-item" style="margin-bottom:1rem;">
+                        <div class="faq-question">${q.question}</div>
+                        <div class="faq-answer">${q.answer}</div>
+                    </div>
+                `;
+            });
+            questionsHtml += '</section>';
+            const questionsContainer = document.getElementById('questions');
+            if (questionsContainer) {
+                questionsContainer.innerHTML = questionsHtml;
+            }
+        }
+
         // Initialer Aufruf zum Aktualisieren der Sichtbarkeit
         updateMapDisplay(mapImageSrc, spawnToggleState, darkMode, currentMapSpawnTypes);
     }

@@ -4,13 +4,35 @@ document.addEventListener('DOMContentLoaded', () => {
         erangel: {
             name: 'Erangel',
             mapImage: '/maps/erangel/',
-            description: 'Die ursprüngliche und bekannteste Karte, bekannt für vielfältige Landschaften und intensive Kämpfe.',
+            top: `Explore the most up-to-date Erangel map in PUBG with all glider spawn points, gas stations, and secret basement locations marked clearly. Updated for 2025, this interactive map helps you plan your route, secure fast rotations, and loot hidden high-tier gear.<br><br>
+            Whether you're playing squads or solos, knowing where to find hang gliders and fuel stations can make the difference between early elimination and a chicken dinner.<br><br>
+            Toggle map layers and dominate Erangel with confidence.`,
+            bottom: `Erangel is the iconic original map of PUBG, combining wide open fields, urban zones, and strategic chokepoints. Our interactive version highlights the three most game-relevant elements currently in play:<br>
+            - 🪂 <strong>Glider spawn points</strong> - Ideal for fast rotations and scouting.<br>
+            - 🛢️ <strong>Gas stations</strong> - Essential for refueling air and land vehicles.<br>
+            - 🔐 <strong>Secret basements</strong> - Contain randomized high-tier loot, accessible with keys.<br>
+            All spawn points on this map are based on in-game data and regularly updated.
+            Whether you're playing casually or pushing for ranked wins, knowing where to refuel or find hidden loot can give you the tactical edge you need.`,
             // NEU: Verfügbare Spawn-Typen für Erangel
             spawnTypes: {
                 hangGliders: 'Hangglider',
                 gasStations: 'Gasstations',
                 secretBasements: 'Secret Basements'
-            }
+            },
+            questions:[
+                {
+                    question: `Where can I find Motor Gliders on Erangel?`,
+                    answer:`Motor Gliders spawn at specific locations across the map. While they are not guaranteed to appear every match, the highlighted spots on our map show where they are most likely to spawn.`,
+                },
+                {
+                    question: `Are Gliders hard spawns on Erangel?`,
+                    answer:`No, Gliders do not have hard (guaranteed) spawns. However, there are consistent high-probability locations that you can rely on most of the time.`,
+                },
+                {
+                    question: `How do I find Secret Rooms on Erangel?`,
+                    answer:`Secret Rooms are hidden underground bunkers that require a special key to open. Their locations are marked on this map with a blue icon.`,
+                }
+            ],
         },
         miramar: {
             name: 'Miramar',
@@ -141,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lade und initialisiere MapDisplay
     // Wir übergeben jetzt den gesamten Toggle-Zustand und die aktuellen spawnTypes
-    loadMapDisplay(currentMap.mapImage, currentMap.name, spawnToggleState, darkMode, currentMap.spawnTypes);
+    loadMapDisplay(currentMap.mapImage, currentMap.name, spawnToggleState, darkMode, currentMap.spawnTypes, currentMap.questions, currentMap.top, currentMap.bottom);
 
     const preloadLink = document.getElementById('map-image-preload');
     if (preloadLink) {
