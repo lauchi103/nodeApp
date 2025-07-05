@@ -19,6 +19,7 @@ html {
     --pubg-dark-bg: #1a1a1a;
     --pubg-medium-bg: #2b2b2b;
     --pubg-text-color: #e0e0e0;
+    --pubg-link-color: #1e90ff;
     --pubg-accent-green: #5cb85c;
     --pubg-accent-orange: #f0ad4e;
     --pubg-border-color: #444444;
@@ -45,6 +46,13 @@ main {
     padding: 1rem 3rem 0 3rem; /* Padding wird in map-page-wrapper gehandhabt */
     box-sizing: border-box;
     background-color: #34495e;
+}
+
+.map-name {
+    color: var(--pubg-text-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .map-page-wrapper {

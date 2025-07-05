@@ -2,8 +2,13 @@
 
 // Parameter angepasst: spawnToggleState (der globale Zustand aller Toggle)
 //                      currentMapSpawnTypes (die relevanten Typen für diese Karte)
-function loadMapDisplay(mapImageSrc, mapAltText, spawnToggleState, darkMode, currentMapSpawnTypes, questions, top, bottom) {
+function loadMapDisplay(mapImageSrc, mapName, spawnToggleState, darkMode, currentMapSpawnTypes, questions, top, bottom, addon) {
     const mapSlug = mapImageSrc.split('/').filter(Boolean).pop();
+
+    const mapNameElement = document.querySelector('.map-name');
+    if (mapNameElement) {
+        mapNameElement.textContent = mapName; // Setze den Kartennamen im Header
+    }
 
     const mapDisplayPlaceholder = document.getElementById('map-display-placeholder');
     if (mapDisplayPlaceholder) {
@@ -28,7 +33,7 @@ function loadMapDisplay(mapImageSrc, mapAltText, spawnToggleState, darkMode, cur
             <div style="flex-grow: 1; position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
                 <img id="currentMapImage"
                     src="/image/${mapSlug}/map.jpg"
-                    alt="${mapAltText}"
+                    alt="${mapName}"
                     loading="lazy"
                     style="width: 100%; height: auto; display: block; ${darkMode ? 'filter: brightness(0.7) contrast(1.2);' : ''}" />
 
@@ -55,8 +60,13 @@ function loadMapDisplay(mapImageSrc, mapAltText, spawnToggleState, darkMode, cur
                     </div>
                 `;
             });
+            if (addon){
+                questionsHtml += "<div class='addon'>";
+                questionsHtml += addon;
+                questionsHtml += '</div>';
+            }
+            questionsHtml += '<div class="support"><br><br>Found an issue or have suggestions? <a href="mailto:support@pubg-maps.com">Contact us via email</a> - your feedback helps us improve the map.</div>'; 
             questionsHtml += '</section>';
-            questionsHtml += '<br><br>Found an issue or have suggestions? <a href="mailto:support@pubg-maps.com">Contact us via email</a> - your feedback helps us improve the map.'; 
             const questionsContainer = document.getElementById('questions');
             if (questionsContainer) {
                 questionsContainer.innerHTML = questionsHtml;

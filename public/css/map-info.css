@@ -57,3 +57,14 @@
     color: var(--pubg-text-color);
     margin-left: 1rem;
 }
+
+.addon {
+    color: var(--pubg-text-color);
+}
+
+.support {
+    color: var(--pubg-text-color);
+}
+.support a{
+    color: var(--pubg-link-color);
+}
