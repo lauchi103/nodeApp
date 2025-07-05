@@ -110,10 +110,6 @@ p {
     transition: color 0.3s ease;
 }
 
-.dark-mode-toggle-button:hover {
-    color: var(--pubg-accent-orange);
-}
-
 /* Icons jetzt als IMG-Tags stylen */
 .dark-mode-toggle-button img {
     width: 1.5rem;  /* Breite des Bildes */

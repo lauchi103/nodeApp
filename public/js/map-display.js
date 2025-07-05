@@ -47,7 +47,7 @@ function updateMapDisplay(mapImageSrc, spawnToggleState, darkMode, currentMapSpa
 
     if (currentMapImage) {
         currentMapImage.src = `/image/${mapSlug}/map.jpg`;
-        currentMapImage.style.filter = darkMode ? 'brightness(0.7) contrast(1.2)' : '';
+        currentMapImage.style.filter = darkMode ? 'brightness(0.5) contrast(1.2)' : '';
     }
 
     // Iteriere über alle _verfügbaren_ Spawn-Typen für die aktuelle Karte
