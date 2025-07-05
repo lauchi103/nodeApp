@@ -52,7 +52,6 @@ app.get('/icon/:iconName', (req, res) => {
     const iconPath = path.join(ASSETS_ICONS_PATH, iconName);
 
     fs.access(iconPath, fs.constants.F_OK, (err) => {
-        console.log(iconPath);
         if (err) {
             console.error(`Icon-Datei nicht gefunden: ${iconPath}`);
             return res.status(404).send('Icon nicht gefunden.');
