@@ -10,6 +10,17 @@ function loadMapDisplay(mapImageSrc, mapName, spawnToggleState, darkMode, curren
         mapNameElement.textContent = mapName; // Setze den Kartennamen im Header
     }
 
+    // Dynamisch den Meta-Description-Tag anpassen
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+        // Nutze mapName und top (ohne HTML-Tags) für die Beschreibung, max. 160 Zeichen
+        const plainTop = top ? top.replace(/<[^>]+>/g, '').replace(/\n/g, ' ') : '';
+        metaDescription.setAttribute(
+            'content',
+            `${mapName} - PUBG Map Guide: ${plainTop.slice(0, 160)}`
+        );
+    }
+
     const mapDisplayPlaceholder = document.getElementById('map-display-placeholder');
     if (mapDisplayPlaceholder) {
         let overlaysHtml = '';
@@ -22,6 +33,7 @@ function loadMapDisplay(mapImageSrc, mapName, spawnToggleState, darkMode, curren
 
                 overlaysHtml += `
                     <img id="${overlayId}"
+                        alt="${typeKey} Overlay"
                         src="${imageSrc}"
                         loading="lazy"
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 1; transition: opacity 0.3s ease-in-out;" />
@@ -33,7 +45,7 @@ function loadMapDisplay(mapImageSrc, mapName, spawnToggleState, darkMode, curren
             <div style="flex-grow: 1; position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
                 <img id="currentMapImage"
                     src="/image/${mapSlug}/map.jpg"
-                    alt="${mapName}"
+                    alt="${mapName} Map"
                     loading="lazy"
                     style="width: 100%; height: auto; display: block; ${darkMode ? 'filter: brightness(0.7) contrast(1.2);' : ''}" />
 
@@ -51,7 +63,7 @@ function loadMapDisplay(mapImageSrc, mapName, spawnToggleState, darkMode, curren
 
         // Fragen und Antworten einfügen
         if (questions && Array.isArray(questions)) {
-            let questionsHtml = '<section class="faq-section"><h3>Frequently Asked Questions</h3>';
+            let questionsHtml = '<section class="faq-section"><h3>Frequently Asked Questions - FAQ</h3>';
             questions.forEach(q => {
                 questionsHtml += `
                     <div class="faq-item" style="margin-bottom:1rem;">

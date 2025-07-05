@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://pubg-maps.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pubg-maps.com/maps/erangel</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pubg-maps.com/maps/miramar</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pubg-maps.com/maps/vikendi</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pubg-maps.com/maps/karakin</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pubg-maps.com/maps/taego</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pubg-maps.com/maps/sanhok</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pubg-maps.com/maps/paramo</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pubg-maps.com/maps/deston</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pubg-maps.com/maps/rondo</loc>
+    <priority>0.9</priority>
+  </url>
+</urlset>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PUBG Maps",
+  "url": "https://pubg-maps.com/",
+  "description": "PUBG Map Guide 2025: Spawnpoints, Gliders, Gasstations, Vehicles, Routes, Secret Basements, Bunker, Soldiers für alle Maps.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "PUBG Maps",
+    "url": "https://pubg-maps.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pubg-maps.com/public/publicicon/favicon-96x96.png"
+    }
+  }
+}
+</script>
