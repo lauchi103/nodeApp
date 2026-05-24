@@ -342,36 +342,36 @@ document.addEventListener('DOMContentLoaded', () => {
             // NEU: Spezifische Spawn-Typen für Rondo
             spawnTypes: {
                 hangGliders: 'Hangglider',
-                soldiers: 'Soldiers' // NEU: Spezifisch für Rondo
+                secretrooms: 'Secret Rooms' // NEU: Spezifisch für Rondo
             },
-            top: `Discover all Glider hardspawn locations and combat zones with AI Soldiers on the interactive Rondo map. Whether you're looking for fast aerial rotations or high-value loot through PvE combat, this map marks the most important elements for tactical gameplay.<br><br>
-            All Glider spawn points are guaranteed and all marked combat zones feature hostile bots, including powerful Commander Units and Level 3 Shops with rare purchasable gear - including Airdrop weapons.`,
+            top: `Discover all Glider hardspawn locations and Secret Rooms on the interactive Rondo map. Whether you're looking for fast aerial rotations or high-value hidden loot, this map marks the most important elements for tactical gameplay.<br><br>
+            All Glider spawn points are guaranteed, and all marked Secret Room locations feature high-tier gear and exclusive weapons. Use this tool to plan your drops, secure your keys, and outmaneuver your opponents with superior equipment.`,
             
-            bottom: `Rondo introduces unique PvE combat elements not found on other PUBG maps. In addition to classic looting and rotations, this map gives players the opportunity to fight AI enemies for high rewards. Here's what to expect:<br>
-            - 🪂 <strong>Glider Hardspawns</strong> - All Glider icons on the map represent 100% fixed spawn locations. These flying vehicles are essential for map control, scouting and fast repositioning.<br>
-            - 🤖 <strong>Soldier Zones (Bots)</strong> - Certain areas on the map are protected by AI Soldiers, who guard loot and shop terminals. These bots are dangerous in groups and have decent accuracy - approach with caution.<br>
-            - 👑 <strong>Commander Units</strong> - Two elite enemies called Commanders spawn per match. They are heavily armored, wield LMGs, and require sustained fire or teamwork to eliminate. Defeating them yields valuable loot and access to shops.<br>
-            - 🛒 <strong>Level 3 Shops (inside bot zones)</strong> - After clearing a bot-occupied area, you'll find Level 3 Shops. These shops allow you to purchase crate-tier weapons (e.g. Groza, AWM, MG3) for 2000-2500 coins. These are some of the most powerful items in the game - without waiting for an airdrop.`,
+            bottom: `Rondo features hidden loot areas that reward players who know where to look. Instead of fighting bots, your focus should be on securing specialized keys to unlock massive gear upgrades. Here's what you need to know about the current Rondo meta:<br>
+            - 🪂 <strong>Glider Hardspawns</strong> - All Glider icons on the map represent 100% fixed spawn locations. These flying vehicles are essential for fast map control, scouting, and escaping tight situations.<br>
+            - 🔐 <strong>Secret Rooms with Key Access</strong> - Hidden across Rondo are select secure structures containing top-tier level 3 gear, rare weapons, and excellent healing items. These rooms can only be breached if you possess a Secret Key.<br>
+            - 🔑 <strong>Finding Secret Keys</strong> - Keys spawn randomly as normal floor loot inside standard buildings. Keep a close eye out while looting early in the match, as finding a key completely changes your rotation strategy.<br>
+            - 🎁 <strong>High-Tier Advantage</strong> - Accessing a Secret Room gives your squad an immediate competitive edge, providing high-value loot without the extreme risk of chasing public airdrops.`,
             
             questions: [
                 {
                     question: `Are Glider spawns fixed on Rondo?`,
-                    answer: `Yes. All Glider spawn locations shown on our map are hard spawns - they are guaranteed every match, unless claimed by another player.`,
+                    answer: `Yes. All Glider spawn locations shown on our map are hard spawns - they are guaranteed to appear every match, unless claimed by another player first.`,
                 },
                 {
-                    question: `Where can I find the Soldier bots?`,
-                    answer: `Bot Soldiers are located in marked combat zones on the map. These zones typically contain loot, currency, and access to high-level shops - but are defended by AI enemies.`,
+                    question: `How do I open Secret Rooms on Rondo?`,
+                    answer: `To unlock a Secret Room on Rondo, you must first find a Secret Key. Once you have the key in your inventory, approach the locked entrance of any marked Secret Room to open it and access the high-tier loot inside.`,
                 },
                 {
-                    question: `How strong are the Commanders?`,
-                    answer: `Very. They are heavily armored, use LMGs, and have higher health than regular bots. Fighting them alone is risky - explosives or squad coordination are recommended.`,
+                    question: `Where can I find Secret Keys on Rondo?`,
+                    answer: `Secret Keys do not have fixed spawn locations. They spawn randomly throughout the map as regular ground loot. Checking high-density looting areas early in the game is your best bet to find one.`,
                 },
                 {
-                    question: `What's in the Level 3 Shops?`,
-                    answer: `Level 3 Shops allow you to buy Airdrop weapons like MG3, AWM, Groza and more - without relying on airdrops. Expect to pay 2000 to 2500 coins, which you can earn by looting defeated bots and ground loot.`,
+                    question: `What kind of loot is hidden inside Rondo's Secret Rooms?`,
+                    answer: `Secret Rooms contain a massive upgrade over standard floor loot. You can reliably find Level 3 armor, high-end scopes, top-tier attachments, and an abundance of powerful healing items to fully kit out your squad.`,
                 },
             ],
-            addon:`Pro tip: Prioritize bot zones with shops early - a purchased crate weapon can turn the tide before anyone else even sees an airdrop.`,
+            addon:`Pro tip: If you or your teammates find a Secret Key early in the game, immediately adjust your rotation toward the nearest marked Secret Room to secure a massive gear advantage before the late-game circles.`,
         }
     };
     let currentMapSlug = window.location.pathname.split('/').pop();
