@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pubg-maps.com/sitemap.xml
