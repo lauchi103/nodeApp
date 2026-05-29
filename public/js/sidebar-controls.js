@@ -4,25 +4,24 @@ function loadSidebarControls(currentMapSpawnTypes, initialSpawnToggleState, init
     const sidebarPlaceholder = document.getElementById('sidebar-controls-placeholder');
     if (sidebarPlaceholder) {
         let htmlContent = `
-            <aside style="background-color: var(--pubg-medium-bg); padding: var(--spacing3); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); width: 250px; flex-shrink: 0;">
-                <div class="dark-mode-toggle-container">
-                    <h3 style="color: var(--pubg-text-color);">Map Options</h3>
-                    <button id="darkModeToggleButton" class="dark-mode-toggle-button">
-                        </button>
+            <aside class="sidebar-container">
+                <div class="sidebar-header">
+                    <h3 class="sidebar-title">Map Options</h3>
+                    <button id="darkModeToggleButton" class="dark-mode-toggle-button"></button>
                 </div>
         `;
 
-        // ... (Der Teil für die Spawn-Typen bleibt unverändert) ...
         for (const typeKey in currentMapSpawnTypes) {
             if (Object.prototype.hasOwnProperty.call(currentMapSpawnTypes, typeKey)) {
                 const typeLabel = currentMapSpawnTypes[typeKey];
                 const isChecked = initialSpawnToggleState[typeKey] ? 'checked' : '';
 
                 htmlContent += `
-                    <div style="margin-bottom: var(--spacing2);">
-                        <label style="color: var(--pubg-text-color); display: flex; align-items: center; cursor: pointer;">
-                            <input type="checkbox" id="toggle-${typeKey}" ${isChecked} style="margin-right: var(--spacing1);" data-spawn-type="${typeKey}" />
-                            ${typeLabel}
+                    <div class="switch-row">
+                        <span class="switch-label">${typeLabel}</span>
+                        <label class="switch-toggle">
+                            <input type="checkbox" id="toggle-${typeKey}" ${isChecked} data-spawn-type="${typeKey}" />
+                            <span class="switch-slider"></span>
                         </label>
                     </div>
                 `;

@@ -36,20 +36,20 @@ function loadMapDisplay(mapImageSrc, mapName, spawnToggleState, darkMode, curren
                         alt="${typeKey} Overlay"
                         src="${imageSrc}"
                         loading="lazy"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 1; transition: opacity 0.3s ease-in-out;" />
+                        class="map-overlay-img" />
                 `;
             }
         }
 
         mapDisplayPlaceholder.innerHTML = `
-            <div style="flex-grow: 1; position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+            <div class="map-wrapper-inner">
                 <img id="currentMapImage"
                     src="/image/${mapSlug}/map.jpg"
                     alt="${mapName} Map"
                     loading="lazy"
-                    style="width: 100%; height: auto; display: block; ${darkMode ? 'filter: brightness(0.7) contrast(1.2);' : ''}" />
+                    class="map-base-img" />
 
-                <div id="overlays-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                <div id="overlays-container" class="map-overlays-container">
                     ${overlaysHtml} </div>
             </div>
         `;
@@ -66,7 +66,7 @@ function loadMapDisplay(mapImageSrc, mapName, spawnToggleState, darkMode, curren
             let questionsHtml = '<section class="faq-section"><h3>Frequently Asked Questions - FAQ</h3>';
             questions.forEach(q => {
                 questionsHtml += `
-                    <div class="faq-item" style="margin-bottom:1rem;">
+                    <div class="faq-item">
                         <div class="faq-question">${q.question}</div>
                         <div class="faq-answer">${q.answer}</div>
                     </div>
@@ -77,7 +77,7 @@ function loadMapDisplay(mapImageSrc, mapName, spawnToggleState, darkMode, curren
                 questionsHtml += addon;
                 questionsHtml += '</div>';
             }
-            questionsHtml += '<div class="support"><br><br>Found an issue or have suggestions? <a href="mailto:support@pubg-maps.com">Contact us via email</a> - your feedback helps us improve the map.</div>'; 
+            questionsHtml += '<div class="support">Found an issue or have suggestions? <a href="mailto:support@pubg-maps.com">Contact us via email</a> - your feedback helps us improve the map.</div>'; 
             questionsHtml += '</section>';
             const questionsContainer = document.getElementById('questions');
             if (questionsContainer) {

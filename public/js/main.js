@@ -10,9 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gasStations: 'Gasstations',
                 secretBasements: 'Secret Basements'
             },
-            top: `Explore the most up-to-date Erangel map in PUBG with all glider spawn points, gas stations, and secret basement locations marked clearly. Updated for 2025, this interactive map helps you plan your route, secure fast rotations, and loot hidden high-tier gear.<br><br>
-            Whether you're playing squads or solos, knowing where to find hang gliders and fuel stations can make the difference between early elimination and a chicken dinner.<br><br>
-            Toggle map layers and dominate Erangel with confidence.`,
+            top: `Explore the interactive PUBG Erangel map with all active glider spawns, gas stations, and secret basements updated for the 2026 meta. Plan your routes and toggle layers to secure high-tier loot and fast rotations.`,
             bottom: `Erangel is the iconic original map of PUBG, combining wide open fields, urban zones, and strategic chokepoints. Our interactive version highlights the three most game-relevant elements currently in play:<br>
             - 🪂 <strong>Glider spawn points</strong> - Ideal for fast rotations and scouting.<br>
             - 🛢️ <strong>Gas stations</strong> - Essential for refueling air and land vehicles.<br>
@@ -56,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gasStations: 'Gasstations'
                 // Miramar hat keine secretBasements im Original, nur als Beispiel
             },
-            top: "Explore the latest interactive map of Miramar in PUBG, highlighting all known Motor Glider soft spawn zones and gas station locations. Whether you're playing solo or in a squad, mastering vehicle access on this vast desert map can give you a serious tactical edge.<br><br>Use our updated map to plan your rotations, locate nearby fuel stations, and take to the skies when the terrain gets tough. Knowing where to find and refuel a Glider can be the difference between survival and early elimination.<br><br>Note: Miramar does not have hard (guaranteed) Glider spawns. All marked points represent soft spawn zones based on high-probability locations gathered from in-game testing and user feedback.",
+            top: "Master the vast desert terrain with our interactive PUBG Miramar map highlighting verified Motor Glider spawn zones and gas stations. Plan efficient rotations and locate fuel pumps to secure a tactical edge in solos or squads.",
             bottom: "Miramar is known for its wide-open spaces, long-range combat, and minimal cover. This makes fast mobility and aerial scouting essential. Our interactive map focuses on:<br>🪂 <strong>Glider soft spawn zones</strong> - For fast rotations and early positioning.<br>⛽ <strong>Gas stations</strong> - Critical for refueling Gliders and land vehicles.<br><br>Stay mobile. Stay prepared. Stay ahead.",
             questions: [
                 {
@@ -96,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 westroute: "Westroute",
                 southroute: "Southroute"
             },
-            top: "🚚 Sanhok -- Loot Truck Routes & Spawn Timings<br><br>Track all Loot Truck routes on Sanhok with our interactive PUBG map. Updated for 2025, this map shows the exact driving paths and spawn times of each truck, helping you intercept them for high-tier loot.<br><br>There are four trucks patrolling Sanhok in every match. As you shoot them, they drop valuable loot along the way. Eventually, each truck can be fully destroyed -- allowing you to loot the entire vehicle for rare weapons, gear, and attachments.<br><br>Note: Each route on the map includes minute-based spawn timers -- so you'll know where each truck will be and when.",
+            top: "Track Sanhok's Loot Truck routes, driving paths, and spawn timings in real-time with our interactive tactical guide. Pinpoint patrols to intercept trucks, blow open crate-grade loot, and secure rare weapons.",
             bottom: "Loot Trucks are an exclusive feature of Sanhok that combine strategy, ambush potential, and rich rewards. Here's how they behave:<br>🚛 <strong>4 trucks per match</strong><br>🎯 <strong>Shoot to drop loot</strong> - trucks periodically drop gear while damaged<br>💥 <strong>Destroyable</strong> - once fully destroyed, the entire truck can be looted<br>⏱ <strong>Timed spawn routes</strong> - each truck has a unique path and start time<br>🎁 <strong>High-tier loot</strong> - including crate-grade items and exclusive gear<br><br>Position yourself along a truck's route, set up ambushes, or chase them down with a vehicle. The loot is worth the effort -- but expect competition.",
             questions: [
                 {
@@ -137,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 hangGliders: 'Hangglider',
                 labcamps: "Lab Camps"
             },
-            top: "🧊 Vikendi -- Glider Hardspawns, Bear Caves, Lab Camps & Bunkers<br><br>Explore our fully updated interactive map of Vikendi, showing all guaranteed Glider spawns, gas stations, Bear Cave entrances, Lab Camps with alarmed loot boxes, and Keycard Bunker locations. Whether you're planning quick rotations, hunting high-tier loot, or prepping for stealthy bunker runs -- this map gives you the upper hand.<br><br>Every location on this map is backed by in-game data and updated regularly. Be it solos or squads -- mastering Vikendi's loot hotspots and mobility points gives you a strategic edge from the very first zone.",
+            top: "Navigate the snowy terrain using our interactive PUBG Vikendi map showing guaranteed Glider spawns, gas stations, Bear Caves, Lab Camps, and secret Keycard Bunkers. Gain an instant strategic advantage by tracking high-tier loot hotspots in real-time.",
             bottom: "Vikendi blends snowy terrain, open fields, and complex vertical zones -- but also hides some of the best loot opportunities in PUBG. This map focuses on five key gameplay elements:<br>🪂 <strong>Glider hardspawns</strong> - Fixed 100% spawn chance, ideal for fast map control<br>⛽ <strong>Gas stations</strong> - Crucial for refueling land and air vehicles<br>🐻 <strong>Bear Caves</strong> - Contain airdrop-grade loot, but Thermal Scopes have been removed in recent patches<br>🔬 <strong>Lab Camps</strong> - Hold crate-level loot, but trigger alarms when opened<br>🗝️ <strong>Keycard Bunkers</strong> - Require Keycards to access hidden high-value loot rooms<br><br>Mastering these hotspots can give you a serious edge -- whether you're chasing the win or farming crates.",
             questions: [
                 {
@@ -182,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
             spawnTypes: {
                 bunkers: "Bunkers"
             },
-            top: "Karakin -- Explodable Bunkers & Secret Rooms<br><br>Explore all bunker entrances and explodable buildings on Karakin with our interactive PUBG mini-map. Every location marked here can only be accessed using Sticky Bombs or Panzerfausts, unlocking underground routes and high-tier loot.<br><br>Whether you're aiming for fast gear, surprise flanks, or stealthy rotations under the surface -- this map shows you exactly where to breach and where to loot.",
+            top: "Locate all destructible walls, underground tunnels, and sealed bunker entrances on Karakin with our interactive PUBG map. Breach chambers using Sticky Bombs or Panzerfausts to quickly acquire high-tier gear and surprise your enemies.",
             bottom: "Karakin is one of PUBG's smallest maps -- but also one of the most intense. What makes it unique is the ability to blow open walls, floors, and bunkers to access hidden loot and new movement options. Our interactive map highlights:<br>💣 <strong>Bunker entrances</strong> - Sealed behind destructible walls, only breakable with explosives<br>🏚️ <strong>Locked buildings</strong> - Contain strong loot, also require Sticky Bombs or Panzerfausts to access<br>🔄 <strong>Underground routes</strong> - Some bunkers let you rotate below ground and surprise enemies from behind<br><br>Proper use of explosives can win you the game -- or at least give you a serious loot advantage. Every marked location has been verified in-game and is updated regularly.",
             questions: [
                 {
@@ -218,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
             spawnTypes: {
                 secretRooms: 'Secret Rooms' 
             },
-            top: "Paramo -- All Secret Room Locations<br><br>Our interactive Paramo map shows all confirmed Secret Room entrances -- based on verified in-game data. These rooms are hidden inside specific grey buildings, which can easily be confused with regular structures on the official map.<br><br>Use pubg-maps.com to avoid wasting time: not every grey building on the official map is a real Secret Room. Only the marked locations on our map are confirmed to require a keycard and contain upgraded loot.",
+            top: "Find confirmed Paramo Secret Rooms requiring Keycards to unlock with our data-backed interactive PUBG map. Discover instant Critical Response Kits and high-tier equipment before the volcanic zones close in.",
             bottom: "Paramo introduces a more subtle approach to hidden loot than other PUBG maps. While the surface looks calm, several high-value areas are only accessible with a Keycard:<br><strong>Secret Rooms</strong> - Hidden inside select grey buildings and only accessible with a Keycard<br><strong>Keycards</strong> - Spawn randomly on the map in ordinary buildings<br><strong>Loot contents</strong> - Better than standard loot, often includes Critical Response Kits for ultra-fast revives<br><strong>Official map confusion</strong> - Many grey buildings look like Secret Rooms, but only some actually are -- which is why this map focuses solely on confirmed locations<br><br>Secret Rooms are low-risk, high-reward -- if you can find a Keycard and reach them before others.",
             questions: [
                 {
@@ -252,14 +250,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 secretRooms: 'Secret Rooms',
                 hangGliders: 'Hangglider'
             },
-            top: `This interactive Taego map shows every confirmed Secret Room entrance and all hard Glider spawn points. Whether you're looking to secure better loot early or control the skies with guaranteed Glider access, this map helps you make tactical decisions before the first shot is fired.<br><br>
-            Each marked location is based on verified in-game testing. Secret Rooms require a Key and feature a sliding wall mechanism. Gliders, on the other hand, always spawn at the same locations - so get there first or lose air dominance.`,
-            
+            top: `Navigate PUBG Taego using our interactive tactical map highlighting every confirmed Secret Room entrance and guaranteed Glider hardspawn location. Plan your drops, acquire keys for hidden vaults, and control the skies early.`,
             bottom: `Taego offers a mix of traditional PUBG combat and exclusive mechanics that reward map knowledge. This tool highlights two game-changing elements:<br>
             - 🔑 <strong>Secret Rooms with Key Access</strong> - Hidden in ordinary buildings, these rooms are locked behind a sliding wall that only opens when a Secret Key is inserted. The loot inside is significantly stronger than typical ground loot and often includes high-value meds, attachments, and gear.<br>
             - 🪂 <strong>Glider Hardspawns</strong> - Gliders on Taego have fixed spawn locations, making air mobility a reliable option. Use them for fast rotations, mid-game scouting, or late-game repositioning from high ground.<br>
             Every marked Secret Room has been manually confirmed. All Glider spawns are guaranteed.`,
-            
             questions: [
                 {
                     question: `How do I open a Secret Room on Taego?`,
@@ -292,21 +287,16 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Deston',
             mapImage: '/maps/deston/',
             description: 'Eine vertikal vielfältige Stadtkarte mit Seilrutschen und vertikalen Aufzügen.',
-            // NEU: Spezifische Spawn-Typen für Deston
             spawnTypes: {
                 gasStations: 'Gasstations',
                 hangGliders: 'Hangglider',
                 securityRooms: 'Security Rooms' // NEU: Spezifisch für Deston
             },
-            top: `Explore the interactive Deston map with all hard Glider spawns, Gas Station locations, and every confirmed Security Room - including both building-based rooms and roadside black trucks.<br><br>
-            Gliders on Deston spawn at fixed locations and offer reliable aerial mobility. Security Rooms contain high-value loot and are only accessible with a KeyCard. Be aware: Some Security Rooms appear as reinforced rooms inside buildings, others are disguised as black armored trucks parked on the roadside.<br><br>
-            All locations are verified and updated regularly to give you the tactical advantage.`,
-            
+            top: `Locate every verified Deston Glider hardspawn, gas station, and locked Security Room (including hidden roadside black trucks) on our interactive map. Unlock reinforced vaults with KeyCards to instantly acquire crate-level weapons and armor.`,
             bottom: `Deston is a vertical and high-mobility map with urban density, open terrain, and powerful loot incentives. This map highlights three critical elements for strategic gameplay:<br>
             - 🪂 <strong>Glider Hardspawns</strong> - All Glider icons on the map represent guaranteed spawns. These are ideal for long-range rotations or fast repositioning in the early and mid-game.<br>
             - ⛽ <strong>Gas Stations</strong> - Scattered across the map, these allow you to refuel land and air vehicles. Perfect for extending Glider range or prepping vehicles for long pushes.<br>
             - 🔐 <strong>Security Rooms (KeyCard required)</strong> - There are two types of Security Rooms on Deston: Inside Buildings - Identifiable by armored glass and steel-reinforced doors, and Black Trucks - Stationary vehicles without windows, found near roads or facilities. Both types require a KeyCard and contain the same tier of loot, but the trucks don't show what's inside. It's a gamble - but often worth it.`,
-            
             questions: [
                 {
                     question: `Do Gliders have hard spawns on Deston?`,
@@ -344,15 +334,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 hangGliders: 'Hangglider',
                 secretrooms: 'Secret Rooms' // NEU: Spezifisch für Rondo
             },
-            top: `Discover all Glider hardspawn locations and Secret Rooms on the interactive Rondo map. Whether you're looking for fast aerial rotations or high-value hidden loot, this map marks the most important elements for tactical gameplay.<br><br>
-            All Glider spawn points are guaranteed, and all marked Secret Room locations feature high-tier gear and exclusive weapons. Use this tool to plan your drops, secure your keys, and outmaneuver your opponents with superior equipment.`,
-            
+            top: `Explore all guaranteed Glider hardspawns and secure Secret Rooms on our interactive PUBG Rondo map. Uncover keys to unlock level 3 gear, rare weapon upgrades, and medical supplies to dominate your rotations.`,
             bottom: `Rondo features hidden loot areas that reward players who know where to look. Instead of fighting bots, your focus should be on securing specialized keys to unlock massive gear upgrades. Here's what you need to know about the current Rondo meta:<br>
             - 🪂 <strong>Glider Hardspawns</strong> - All Glider icons on the map represent 100% fixed spawn locations. These flying vehicles are essential for fast map control, scouting, and escaping tight situations.<br>
             - 🔐 <strong>Secret Rooms with Key Access</strong> - Hidden across Rondo are select secure structures containing top-tier level 3 gear, rare weapons, and excellent healing items. These rooms can only be breached if you possess a Secret Key.<br>
             - 🔑 <strong>Finding Secret Keys</strong> - Keys spawn randomly as normal floor loot inside standard buildings. Keep a close eye out while looting early in the match, as finding a key completely changes your rotation strategy.<br>
             - 🎁 <strong>High-Tier Advantage</strong> - Accessing a Secret Room gives your squad an immediate competitive edge, providing high-value loot without the extreme risk of chasing public airdrops.`,
-            
             questions: [
                 {
                     question: `Are Glider spawns fixed on Rondo?`,
@@ -374,6 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
             addon:`Pro tip: If you or your teammates find a Secret Key early in the game, immediately adjust your rotation toward the nearest marked Secret Room to secure a massive gear advantage before the late-game circles.`,
         }
     };
+    
     let currentMapSlug = window.location.pathname.split('/').pop();
     
     if (window.location.pathname === '/' || window.location.pathname === '') {
@@ -385,21 +373,15 @@ document.addEventListener('DOMContentLoaded', () => {
         currentMapSlug = 'erangel';
     }
     
-    let currentMap = mapData[currentMapSlug];
-    console.log(currentMap);
-    console.log("aktuelle Karte geladen")
-
     // Initialisiere den Zustand der Marker
-    // Wir initialisieren alle möglichen Spawn-Typen auf 'true' hier.
-    // Die SidebarControls und MapDisplay filtern dann, was für die aktuelle Karte relevant ist.
     let spawnToggleState = {
         hangGliders: true,
         gasStations: true,
         secretBasements: true,
-        securityRooms: true, // NEU
-        secretRooms: true, // NEU
-        emergencyPickups: true, // NEU
-        weaponCaches: true, // NEU
+        securityRooms: true,
+        secretRooms: true,
+        emergencyPickups: true,
+        weaponCaches: true,
         soldiers: true,
         bunkers: true,
         labcamps: true,
@@ -409,26 +391,59 @@ document.addEventListener('DOMContentLoaded', () => {
         bears: true,
         southroute: true,
     };
-    let darkMode = true;
+    
+    // Lade Dark-Mode-Auswahl aus localStorage (Standard: true / Dark Mode)
+    let darkMode = localStorage.getItem('darkMode') !== 'false';
+    document.body.classList.toggle('dark-mode', darkMode);
+    document.documentElement.classList.toggle('dark-mode', darkMode);
+
+    // Globale Funktion zum dynamischen Laden der Karte (SPA)
+    window.loadMap = function(mapSlug) {
+        if (!mapData[mapSlug]) return;
+        const currentMap = mapData[mapSlug];
+        
+        // Dynamic title update with current year
+        const currentYear = new Date().getFullYear();
+        document.title = `Pubg Maps | ${currentYear} | Spawnpoints for ${currentMap.name} | Gliders, Gasstations, Vehicles, Routes, Secret Basements, Bunker, Soldiers`;
+        
+        // Sidebar-Controls dynamisch laden
+        loadSidebarControls(currentMap.spawnTypes, spawnToggleState, darkMode, (event) => {
+            Object.assign(spawnToggleState, event.detail.spawnToggleState);
+            darkMode = event.detail.darkMode;
+            localStorage.setItem('darkMode', darkMode);
+            document.body.classList.toggle('dark-mode', darkMode);
+            document.documentElement.classList.toggle('dark-mode', darkMode);
+            updateMapDisplay(currentMap.mapImage, spawnToggleState, darkMode, currentMap.spawnTypes);
+        });
+
+        // MapDisplay dynamisch laden
+        loadMapDisplay(currentMap.mapImage, currentMap.name, spawnToggleState, darkMode, currentMap.spawnTypes, currentMap.questions, currentMap.top, currentMap.bottom, currentMap.addon);
+
+        const preloadLink = document.getElementById('map-image-preload');
+        if (preloadLink) {
+            preloadLink.href = `/image/${mapSlug}/map.jpg`;
+        }
+    };
+
+    // Event-Listener für Zurück-/Vorwärts-Navigation des Browsers
+    window.addEventListener('popstate', () => {
+        let slug = window.location.pathname.split('/').pop() || 'erangel';
+        if (window.location.pathname === '/' || window.location.pathname === '') slug = 'erangel';
+        window.loadMap(slug);
+        
+        // Navbar Active-Klasse anpassen
+        const navbarPlaceholder = document.getElementById('navbar-placeholder');
+        if (navbarPlaceholder) {
+            const currentPath = window.location.pathname === '/' || window.location.pathname === '' ? '/maps/erangel' : window.location.pathname;
+            navbarPlaceholder.querySelectorAll('a').forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === currentPath);
+            });
+        }
+    });
 
     // Lade und initialisiere Navbar
     loadNavbar();
 
-    // Lade und initialisiere SidebarControls
-    // Wir übergeben jetzt die spawnTypes der aktuellen Karte und den gesamten Toggle-Zustand
-    loadSidebarControls(currentMap.spawnTypes, spawnToggleState, darkMode, (event) => {
-        // Aktualisiere nur die geänderten Zustände
-        Object.assign(spawnToggleState, event.detail.spawnToggleState);
-        darkMode = event.detail.darkMode;
-        updateMapDisplay(currentMap.mapImage, spawnToggleState, darkMode, currentMap.spawnTypes);
-    });
-
-    // Lade und initialisiere MapDisplay
-    // Wir übergeben jetzt den gesamten Toggle-Zustand und die aktuellen spawnTypes
-    loadMapDisplay(currentMap.mapImage, currentMap.name, spawnToggleState, darkMode, currentMap.spawnTypes, currentMap.questions, currentMap.top, currentMap.bottom, currentMap.addon);
-
-    const preloadLink = document.getElementById('map-image-preload');
-    if (preloadLink) {
-        preloadLink.href = `/image/${mapSlug}/map.jpg`;
-    }
+    // Initialer Aufruf der aktuellen Karte
+    window.loadMap(currentMapSlug);
 });

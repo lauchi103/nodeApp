@@ -21,6 +21,14 @@
     <meta name="description" content="Explore the latest PUBG maps for 2025, featuring spawn points, gliders, gas stations, vehicles, routes, secret basements, bunkers, and soldiers. Stay updated with the most comprehensive map guide." />
     <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/map-info.css" />
+    <script>
+        // Prevent white flash by applying dark-mode class to <html> immediately
+        if (localStorage.getItem('darkMode') !== 'false') {
+            document.documentElement.classList.add('dark-mode');
+        }
+        // Always display the current year dynamically in the tab title
+        document.title = document.title.replace('2025', new Date().getFullYear());
+    </script>
 </head>
 <body>
     <div id="navbar-placeholder"></div>
