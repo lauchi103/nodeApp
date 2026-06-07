@@ -6,7 +6,7 @@ const fs = require('fs');
 const db = require('./database');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const ASSETS_BASE_PATH = path.join(__dirname, 'assets');
 const ASSETS_MAPS_PATH = path.join(ASSETS_BASE_PATH, 'maps');
