@@ -2589,91 +2589,91 @@ document.addEventListener('DOMContentLoaded', () => {
               },
               {
                         "label": "Marker 11",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 3809,
                         "y": -2669
               },
               {
                         "label": "Marker 12",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 5064,
                         "y": -2068
               },
               {
                         "label": "Marker 13",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 6738,
                         "y": -4344
               },
               {
                         "label": "Marker 14",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 5826,
                         "y": -889
               },
               {
                         "label": "Marker 15",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 7041,
                         "y": -2800
               },
               {
                         "label": "Marker 16",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 3052,
                         "y": -935
               },
               {
                         "label": "Marker 17",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 1479,
                         "y": -1363
               },
               {
                         "label": "Marker 18",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 1431,
                         "y": -3256
               },
               {
                         "label": "Marker 19",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 1470,
                         "y": -4812
               },
               {
                         "label": "Marker 20",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 3034,
                         "y": -5170
               },
               {
                         "label": "Marker 21",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 1282,
                         "y": -6530
               },
               {
                         "label": "Marker 22",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 3402,
                         "y": -7041
               },
               {
                         "label": "Marker 23",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 4965,
                         "y": -7426
               },
               {
                         "label": "Marker 24",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 5747,
                         "y": -6143
               },
               {
                         "label": "Marker 25",
-                        "type": "secretrooms",
+                        "type": "secretRooms",
                         "x": 4694,
                         "y": -4416
               }
@@ -2684,7 +2684,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // NEU: Spezifische Spawn-Typen für Rondo
             spawnTypes: {
                 hangGliders: 'Hangglider',
-                secretrooms: 'Secret Rooms' // NEU: Spezifisch für Rondo
+                secretRooms: 'Secret Rooms' // NEU: Spezifisch für Rondo
             },
             top: `Explore all guaranteed Glider hardspawns and secure Secret Rooms on our interactive PUBG Rondo map. Uncover keys to unlock level 3 gear, rare weapon upgrades, and medical supplies to dominate your rotations.`,
             bottom: `Rondo features hidden loot areas that reward players who know where to look. Instead of fighting bots, your focus should be on securing specialized keys to unlock massive gear upgrades. Here's what you need to know about the current Rondo meta:<br>
