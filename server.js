@@ -13,10 +13,10 @@ const ASSETS_MAPS_PATH = path.join(ASSETS_BASE_PATH, 'maps');
 const ASSETS_ICONS_PATH = path.join(ASSETS_BASE_PATH, 'icon'); // Pfad zu Icons
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'httpdocs')));
 
 app.get(['/', '/maps/:mapName'], (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'views', 'map-template.html'));
+    res.sendFile(path.join(__dirname, 'httpdocs', 'views', 'map-template.html'));
 });
 
 app.get('/image/:mapName/:imageFile', (req, res) => {
