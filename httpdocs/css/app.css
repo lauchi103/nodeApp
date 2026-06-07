@@ -306,6 +306,23 @@ body.dark-mode .dark-mode-toggle-button img {
     filter: brightness(0) invert(1);
 }
 
+/* Ad Slot Container */
+.ad-slot-container {
+    width: 100%;
+    min-width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 1360px) {
+    .ad-slot-container {
+        min-width: auto;
+        margin: 1rem 0;
+    }
+}
+
 /* Map Display */
 #map-display-placeholder {
     width: 1008px;

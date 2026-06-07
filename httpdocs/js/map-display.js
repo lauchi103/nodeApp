@@ -85,17 +85,26 @@ function loadMapDisplay(mapImageSrc, mapName, spawnToggleState, darkMode, curren
 
             var map = new L.Map('leafletMap', {
                 maxZoom: mapMaxZoom,
-                minZoom: mapMinZoom,
+                minZoom: 2,
                 crs: crs,
-                attributionControl: false
+                attributionControl: false,
+                maxBounds: L.latLngBounds(
+                    crs.unproject(L.point(mapExtent[0], mapExtent[1])),
+                    crs.unproject(L.point(mapExtent[2], mapExtent[3]))
+                ),
+                maxBoundsViscosity: 1.0
             });
 
             const folderName = mapFolderNames[mapSlug] || (mapSlug.charAt(0).toUpperCase() + mapSlug.slice(1));
             L.tileLayer(`/maps/${folderName}/{z}/{x}/{y}.png`, {
-                minZoom: mapMinZoom,
+                minZoom: 2,
                 maxZoom: mapMaxZoom,
                 noWrap: true,
-                tms: false
+                tms: false,
+                bounds: L.latLngBounds(
+                    crs.unproject(L.point(mapExtent[0], mapExtent[1])),
+                    crs.unproject(L.point(mapExtent[2], mapExtent[3]))
+                )
             }).addTo(map);
 
             // Center view initially
