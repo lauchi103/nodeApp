@@ -1,103 +1,92 @@
 // database.js
-const sqlite3 = require('sqlite3').verbose();
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
 const crypto = require('crypto');
 
-// Ensure data folder exists in workspace
+// Ensure data folder and comments JSON file exist in workspace
 const dbDir = path.join(__dirname, 'data');
+const dbPath = path.join(dbDir, 'comments.json');
+
 if (!fs.existsSync(dbDir)) {
     fs.mkdirSync(dbDir, { recursive: true });
 }
 
-const dbPath = path.join(dbDir, 'database.sqlite');
-const db = new sqlite3.Database(dbPath, (err) => {
-    if (err) {
-        console.error('Failed to connect to SQLite database:', err);
-    } else {
-        console.log('Connected to SQLite database at:', dbPath);
-        initializeDatabase();
-    }
-});
+if (!fs.existsSync(dbPath)) {
+    fs.writeFileSync(dbPath, JSON.stringify([]), 'utf8');
+}
 
-function initializeDatabase() {
-    db.serialize(() => {
-        db.run(`
-            CREATE TABLE IF NOT EXISTS comments (
-                id TEXT PRIMARY KEY,
-                map_slug TEXT NOT NULL,
-                username TEXT NOT NULL,
-                comment_text TEXT NOT NULL,
-                created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-            )
-        `, (err) => {
-            if (err) {
-                console.error('Error creating comments table:', err);
-            } else {
-                console.log('Comments table is ready.');
-                // Migration: Add ip_address column if it does not exist
-                db.run('ALTER TABLE comments ADD COLUMN ip_address TEXT', (err2) => {
-                    if (err2 && !err2.message.includes('duplicate column name')) {
-                        console.error('Error adding ip_address column:', err2);
-                    }
-                });
-            }
-        });
-    });
+// Read helper
+function readData() {
+    try {
+        if (!fs.existsSync(dbPath)) return [];
+        const content = fs.readFileSync(dbPath, 'utf8');
+        return JSON.parse(content || '[]');
+    } catch (e) {
+        console.error('Failed to read comments JSON database:', e);
+        return [];
+    }
+}
+
+// Write helper
+function writeData(data) {
+    try {
+        fs.writeFileSync(dbPath, JSON.stringify(data, null, 2), 'utf8');
+    } catch (e) {
+        console.error('Failed to write comments JSON database:', e);
+    }
 }
 
 // Get comments for a map slug
 function getComments(mapSlug, includeIp = false) {
-    return new Promise((resolve, reject) => {
-        const query = includeIp
-            ? 'SELECT id, username, comment_text as text, ip_address as ipAddress, created_at as createdAt FROM comments WHERE map_slug = ? ORDER BY created_at DESC'
-            : 'SELECT id, username, comment_text as text, created_at as createdAt FROM comments WHERE map_slug = ? ORDER BY created_at DESC';
-        db.all(
-            query,
-            [mapSlug],
-            (err, rows) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(rows);
+    return new Promise((resolve) => {
+        const all = readData();
+        const filtered = all
+            .filter(c => c.mapSlug === mapSlug)
+            .map(c => {
+                const res = {
+                    id: c.id,
+                    username: c.username,
+                    text: c.text,
+                    createdAt: c.createdAt
+                };
+                if (includeIp) {
+                    res.ipAddress = c.ipAddress;
                 }
-            }
-        );
+                return res;
+            });
+        
+        // Sort chronologically (newest first)
+        filtered.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        resolve(filtered);
     });
 }
 
 // Add comment
 function addComment(mapSlug, username, commentText, ipAddress) {
-    return new Promise((resolve, reject) => {
-        const id = crypto.randomUUID();
-        db.run(
-            'INSERT INTO comments (id, map_slug, username, comment_text, ip_address) VALUES (?, ?, ?, ?, ?)',
-            [id, mapSlug, username, commentText, ipAddress],
-            function(err) {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve({ id, username, text: commentText, ipAddress, createdAt: new Date().toISOString() });
-                }
-            }
-        );
+    return new Promise((resolve) => {
+        const all = readData();
+        const newComment = {
+            id: crypto.randomUUID(),
+            mapSlug,
+            username,
+            text: commentText,
+            ipAddress,
+            createdAt: new Date().toISOString()
+        };
+        all.push(newComment);
+        writeData(all);
+        resolve(newComment);
     });
 }
 
 // Delete comment by ID
 function deleteComment(commentId) {
-    return new Promise((resolve, reject) => {
-        db.run(
-            'DELETE FROM comments WHERE id = ?',
-            [commentId],
-            function(err) {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(this.changes > 0);
-                }
-            }
-        );
+    return new Promise((resolve) => {
+        const all = readData();
+        const initialLength = all.length;
+        const filtered = all.filter(c => c.id !== commentId);
+        writeData(filtered);
+        resolve(filtered.length < initialLength);
     });
 }
 
